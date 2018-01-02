@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER Beam <b-docker-socialsend@grmbl.net>
+MAINTAINER Beam <b-docker-socialsend*grmbl.net>
 
 RUN apt-get update && apt-get upgrade 
 RUN apt-get install -y pkg-config apt-utils build-essential autoconf automake libtool libboost-all-dev libgmp-dev libssl-dev libcurl4-openssl-dev git software-properties-common python-software-properties bsdmainutils
