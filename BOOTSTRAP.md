@@ -1,3 +1,5 @@
+# Bootstrapping Social SEND wallet/client
+
 When installing a new client (be it on Mac OS X, Linux or windows) it might take a while to get the blockchain on your computer up to date.
 
 To speed this up you can download the latest bootstrap (a snapshot of the blockchain at a recent date).
