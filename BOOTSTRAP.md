@@ -7,7 +7,7 @@ Once downloaded you can install this on your client and then syncing it go much 
 The instructions for all clients are pretty much the same.
 
 The bootstrap can be found here:
-- <a href="https://socialsend.io/#downloads">socialsend Downloads</a>
+- <a href="https://socialsend.io/#downloads">Socialo Send Downloads</a>
 - Discord: Social Send - SEND #announcements
 
 
