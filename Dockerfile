@@ -20,3 +20,5 @@ RUN rm -rf /home/send/SocialSend
 ADD run.sh /home/send/run.sh
 
 ENTRYPOINT /bin/su - send -c "/home/send/run.sh" 
+
+EXPOSE 50050

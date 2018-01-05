@@ -13,7 +13,7 @@ The bootstrap can be found here:
 Here they are for Mac Os X:
 1. download the latest bootstrap 
 1. stop Send-QT
-2. open the folder: ~/Library/Application Support/SEND
+2. open the SEND config folder: ~/Library/Application Support/SEND
 3. remove blocks chainstate peers.dat
 4. unzip the latest bootstrap you've downloaded 
 5. double check you now have blocks chainstate and peers.dat again
@@ -21,4 +21,8 @@ Here they are for Mac Os X:
 
 
 The peers.dat contains the latest list of nodes to sync the blockchain from. So if you're getting syncing issues, see no nodes to sync to, this will fix it.
+
+
+For linux/unix the folder is $HOME/.send
+For windows the folder is called $HOME/AppData/something
 

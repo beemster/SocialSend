@@ -16,4 +16,3 @@ docker run -v /path/to/send-config-dir:/home/send/.send [-d|-it] bram/socialsend
 Configs will be created.
 
 
-
