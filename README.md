@@ -1,5 +1,5 @@
 # socialsend
-socialsend build
+socialsend wallet/masternode 
 
 This is a dockerfile for the socialsend client.
 Originated as a client to run in docker under Mac OS X as the macos client is not very well supported.
