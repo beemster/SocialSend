@@ -19,22 +19,22 @@ If your accountname is "johndoe" then
 
 Mac OS X: 
 - $HOME=/Users/johndoe 
-- SEND_confdir=$HOME/Library/Application Support/SEND => /Users/johndoe/Library/Application Support/SEND
+- SEND_confdir=$HOME/Library/Application Support/SEND (/Users/johndoe/Library/Application Support/SEND)
 
 Unix/Linux: 
 - $HOME=/home/johndoe 
-- SEND_confdir=$HOME/.send => /home/johndoe/.send
+- SEND_confdir=$HOME/.send (/home/johndoe/.send)
 
 
 Windows: 
 - $HOME=C:\Users\johndoe
-- SEND_confdir=$HOME\AppData\SEND => C:\Users\johndoe\AppData\SEND
+- SEND_confdir=$HOME\AppData\SEND (C:\Users\johndoe\AppData\SEND)
 or
-- SEND_confdir=$HOME\Application Data\SEND => C:\Users\johndoe\Application Data\SEND
+- SEND_confdir=$HOME\Application Data\SEND (C:\Users\johndoe\Application Data\SEND)
 
 Wine on Mac OS X:
 - $HOME=/Users/johndoe 
-- SEND_confdir=$HOME/.wine/drive_c/users/johndoe/Application Data/SEND => /Users/johndoe/.wine/drive_c/users/johndoe/Application Data/SEND
+- SEND_confdir=$HOME/.wine/drive_c/users/johndoe/Application Data/SEND (/Users/johndoe/.wine/drive_c/users/johndoe/Application Data/SEND)
 
 
 
