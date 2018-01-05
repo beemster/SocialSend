@@ -10,6 +10,9 @@ The bootstrap can be found here:
 - <a href="https://socialsend.io/#downloads">socialsend Downloads</a>
 - Discord: Social Send - SEND #announcements
 
+
+$HOME is the same as '~' and means /Users/yourusername
+
 Here they are for Mac Os X:
 1. download the latest bootstrap 
 1. stop Send-QT
