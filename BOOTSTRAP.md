@@ -13,9 +13,11 @@ The bootstrap can be found here:
 
 The instructions for all clients are pretty much the same.
 
-$HOME is the same as '~' and means /Users/yourusername
 
 Here they are for Mac Os X:
+
+$HOME is the same as '~' and means /Users/yourusername
+
 1. download the latest bootstrap 
 1. stop Send-QT
 2. open the SEND config folder: ~/Library/Application Support/SEND
