@@ -47,6 +47,6 @@ Wine on Mac OS X:
 6. start Send-QT
 
 
-The peers.dat contains the latest list of nodes to sync the blockchain from. So if you're getting syncing issues, see no nodes to sync to, this will fix it.
+The peers.dat contains the latest list of nodes to sync the blockchain from. So if you're getting syncing issues, like seeing no nodes to sync to, this will fix it.
 
 
