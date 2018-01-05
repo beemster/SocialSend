@@ -18,31 +18,31 @@ $HOME is the same as '~' and means your account's default (home) directory/folde
 If your accountname is "johndoe" then
 
 Mac OS X: 
-$HOME=/Users/johndoe 
-SEND conf directory=$HOME/Library/Application Suppport/SEND
+- $HOME=/Users/johndoe 
+- SEND_confdir=$HOME/Library/Application Suppport/SEND
 
 Unix/Linux: 
-/home/johndoe 
-SEND conf directory=$HOME/.send
+- $HOME=/home/johndoe 
+- SEND_confdir=$HOME/.send
 
 
 Windows: 
-C:\Users\johndoe
-SEND conf directory=$HOME\AppData\SEND
+- #HOME=C:\Users\johndoe
+- SEND_confdir=$HOME\AppData\SEND
 or
-SEND conf directory=$HOME\Application Data\SEND
+- SEND_confdir=$HOME\Application Data\SEND
 
 Wine on Mac OS X:
-$HOME=/Users/johndoe 
-SEND conf directory=$HOME/.wine/drive_C/users/johndoe/Application Data/SEND
+- $HOME=/Users/johndoe 
+- SEND_confdir=$HOME/.wine/drive_C/users/johndoe/Application Data/SEND
 
 
 
 1. download the latest bootstrap 
 1. stop Send-QT
-2. open the SEND config folder (SEND conf directory, see above for your OS): $HOME/Library/Application Support/SEND
+2. open the SEND_confdir (see above for your OS), on macos: $HOME/Library/Application Support/SEND
 3. remove the following: blocks chainstate peers.dat
-4. unzip the latest bootstrap you've downloaded in the SEND conf directory or move them there
+4. unzip the latest bootstrap you've downloaded in the SEND_confdir or move them there
 5. double check you now have blocks chainstate and peers.dat again
 6. start Send-QT
 
