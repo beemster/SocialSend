@@ -38,7 +38,7 @@ Wine on Mac OS X:
 
 
 
-1. download the latest bootstrap 
+0. download the latest bootstrap 
 1. stop Send-QT
 2. open the SEND_confdir (see above for your OS), on macos: $HOME/Library/Application Support/SEND
 3. remove the following: blocks chainstate peers.dat
