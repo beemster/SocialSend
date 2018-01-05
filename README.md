@@ -2,7 +2,7 @@
 socialsend wallet/masternode 
 
 This is a dockerfile for the socialsend client.
-Originated as a client to run in docker under Mac OS X as the macos client is not very well supported.
+You can use this as a client wallet for Mac and also as quick way to setup a masternode.
 
 Built on linux:xenial with db4.8 for backwards wallet compatibility
 
