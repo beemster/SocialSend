@@ -4,12 +4,12 @@ To speed this up you can download the latest bootstrap (a snapshot of the blockc
 Once downloaded you can install this on your client and then syncing it go much faster.
 
 
-The instructions for all clients are pretty much the same.
-
 The bootstrap can be found here:
 - <a href="https://socialsend.io/#downloads">Socialo Send Downloads</a>
 - Discord: Social Send - SEND #announcements
 
+
+The instructions for all clients are pretty much the same.
 
 $HOME is the same as '~' and means /Users/yourusername
 
