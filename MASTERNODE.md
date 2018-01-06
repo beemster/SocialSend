@@ -29,7 +29,8 @@ On the Client do the following:
 
 ## Client configs
 send.conf:
-```rpcuser=sendrpc
+```
+rpcuser=sendrpc
 rpcpassword=<rpc password for Client>
 pcallowip=127.0.0.1
 staking=1
@@ -37,12 +38,13 @@ server=1
 listen=1
 daemon=1
 logtimestamps=1
-maxconnections=256```
+maxconnections=256
+```
 
 masternode.conf:
-```LABEL MNIP:MNPORT SEND_privkey TX_ID TX_IDX```
-
-
+```
+LABEL MNIP:MNPORT SEND_privkey TX_ID TX_IDX
+```
 
 ## MN configs
 
@@ -50,7 +52,8 @@ masternode.conf:
 	nothing relevant, commented lines are ok, otherwise empty unless you need advanced stuff
 
 send.conf:
-```rpcuser=sendrpc
+```
+rpcuser=sendrpc
 rpcpassword=<rpc password for MN>
 pcallowip=127.0.0.1
 #staking=1
@@ -62,5 +65,6 @@ maxconnections=256
 masternode=1
 masternodeprivkey=<SEND_privkey>
 masternodeaddr=<MN_IP>:<MN_Port>
-externalip=<MN_IP>:<MN_Port>```
+externalip=<MN_IP>:<MN_Port>
+```
 
