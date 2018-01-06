@@ -28,23 +28,6 @@ Let's go:
 3. Transfer exactly SEND_AMOUNT SEND to the address (SEND_Address) generated in the previous step
 4. Get the transaction details (TX_ID and TX_IDX) on the Client(Debug console): `masternode outputs`
 5. Fill it all in in the config files on the Client and on the MN, see below.
-6. Start the Client: GUI or CLI: `sendd`
-7. Start the MN CLI: `sendd`
-8. On the Client, tell the MN to go ahead via GUI (Masternodes -> start missing/node) or via CLI: `masternode start-alias LABEL`
-9. Verify if your MN is running (on the MN): `egrep -A 5 '(CActiveMasternode|EnableHot|Ping vin)' debug.log`
-
-If you see something like this, the MN should be running:
-> 2018-01-05 23:24:37 CActiveMasternode::EnableHotColdMasterNode() - Enabled! You may shut down the cold daemon.
->
-> 2018-01-05 23:24:37 CActiveMasternode::SendMasternodePing() - Relay Masternode Ping vin = CTxIn(COutPoint(24da8ba47e46800a5cb40985e225aadc53eea5be0a6f5a4d03a86a008a80aa9f, 0), scriptSig=)
-
-If you see the following after it, it means the blockchain is not synced yet.
-> 2018-01-05 23:24:37 CActiveMasternode::ManageStatus() - Error on Ping: Too early to send Masternode Ping
-
-You should get a final line like this when it's up todate.
-> 2018-01-05 23:24:37 CActiveMasternode::SendMasternodePing() - Relay Masternode Ping vin = CTxIn(COutPoint(24da8ba47e46800a5cb40985e225aadc53eea5be0a6f5a4d03a86a008a80aa9f, 0), scriptSig=)
-
-
 
 ## Client configs
 send.conf:
@@ -87,3 +70,20 @@ masternodeaddr=<MN_IP>:<MN_Port>
 externalip=<MN_IP>:<MN_Port>
 ```
 
+6. Start the Client: GUI or CLI: `sendd`
+7. Start the MN CLI: `sendd`
+8. On the Client, tell the MN to go ahead via GUI (Masternodes -> start missing/node) or via CLI: `masternode start-alias LABEL`
+9. Verify if your MN is running (on the MN): `egrep -A 5 '(CActiveMasternode|EnableHot|Ping vin)' debug.log`
+
+If you see something like this, the MN should be running:
+> 2018-01-05 23:24:37 CActiveMasternode::EnableHotColdMasterNode() - Enabled! You may shut down the cold daemon.
+>
+> 2018-01-05 23:24:37 CActiveMasternode::SendMasternodePing() - Relay Masternode Ping vin = CTxIn(COutPoint(24da8ba47e46800a5cb40985e225aadc53eea5be0a6f5a4d03a86a008a80aa9f, 0), scriptSig=)
+
+If you see the following after it, it means the blockchain is not synced yet.
+> 2018-01-05 23:24:37 CActiveMasternode::ManageStatus() - Error on Ping: Too early to send Masternode Ping
+
+You should get a final line like this when it's up to date.
+> 2018-01-05 23:24:37 CActiveMasternode::SendMasternodePing() - Relay Masternode Ping vin = CTxIn(COutPoint(24da8ba47e46800a5cb40985e225aadc53eea5be0a6f5a4d03a86a008a80aa9f, 0), scriptSig=)
+
+Good luck!
