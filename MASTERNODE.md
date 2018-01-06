@@ -29,7 +29,7 @@ Let's go:
 4. Get the transaction details (TX_ID and TX_IDX) on the Client(Debug console): `masternode outputs`
 5. Fill it all in in the config files on the Client and on the MN, see below.
 
-## Client configs
+#### Client configs
 send.conf:
 ```
 rpcuser=sendrpc
@@ -48,7 +48,7 @@ masternode.conf:
 LABEL MNIP:MNPORT SEND_privkey TX_ID TX_IDX
 ```
 
-## MN configs
+#### MN configs
 
 masternode.conf: 
 	nothing relevant, commented lines are ok, otherwise empty unless you need advanced stuff
@@ -86,4 +86,3 @@ If you see the following after it, it means the blockchain is not synced yet.
 You should get a final line like this when it's up to date.
 > 2018-01-05 23:24:37 CActiveMasternode::SendMasternodePing() - Relay Masternode Ping vin = CTxIn(COutPoint(24da8ba47e46800a5cb40985e225aadc53eea5be0a6f5a4d03a86a008a80aa9f, 0), scriptSig=)
 
-Good luck!
