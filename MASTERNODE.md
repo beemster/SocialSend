@@ -19,7 +19,7 @@ Here are the pieces we need:
 - MN_Port: port to be used to connect to the MN. Default: 50050
 
 
-Keep a list of all pieces above and fill them in as you go along. You will need them to fill in the config files.
+Keep a list of all pieces above and fill them in as you go along. You will need them to populate the config files.
 
 Let's go:
 1. Generate private key (SEND_privkey). You can do this on the Client (Debug console) or MN (send-cli): `masternode genkey`
