@@ -1,12 +1,11 @@
 # Masternode setup
 
-MM: Masternode on a dedicated instance (VPS/dedicated/VM/..)
-Client: Client on your local computer
+- MN: Masternode on a dedicated instance (VPS/dedicated/VM/..)
+- Client: Client on your local computer
 
-On the masternode (MN) you run sendd (send daemon), it will look at a certain transaction and verify  as a seperate instance.
-For it to be recognised as a MN, you need a certain amount of SEND as proof (20180105: 6250 SEND).
+On the masternode (MN) you run sendd (send daemon), it will need to see a wallet with SEND_AMOUNT of coins to act as a MN.
 
-This SEND will sit in a seperate client wallet running (mostly) on the Client (your local computer).
+This SEND will sit in a wallet running on the Client (in most cases, your local computer).
 
 Here are the pieces we need:
 
