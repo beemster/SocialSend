@@ -10,40 +10,59 @@ This SEND will sit in a seperate client wallet running (mostly) on the Client (y
 
 Here are the pieces we need:
 
-- Address with SEND: 
-- TX for sending the SEND to that address:
-- Index for that TX: 
-- Generated private key:
-- IP and port of the MN:
+- LABEL: this is the label we're going to use to refer to our MN, only going to be used on the Client side, for example: MN1
+- SEND_Address: this address will need to have exactly the right amount of SEND
+- TX_ID: ID for the transaction to the SEND_Address used to lock your SEND
+- TX_IDX: Index for that TX_ID
+- SEND_privkey: Private key for connecting MN with Client
+- MN_IP: IP address of the instance you are running the MN
+- MN_Port: port to be used to connect to the MN. Default: 50050
 
 
 
 On the Client do the following:
-1. Generate private key (it doesn't really matter if you do this on the Client or MN):  Debug console: masternode genkey 
-2. Get Address for Coin Locking - getaccountaddress LABEL
-3. Transfer exact coins to the address you got in step 2
-4. do  masternode outputs. It should give you transaction ID and output index
+1. Generate private key (SEND_privkey). You can do this on the Client (Debug console) or MN (send-cli): `masternode genkey`
+2. Get a new address (SEND_Address) for Coin Locking on the Client (Debug console): `getaccountaddress LABEL`
+3. Transfer exact coins to the address (SEND_Address) in the previous step
+4. Get the transaction details (TX_ID and TX_IDX) on the Client(Debug console): `masternode outputs`
+5. 
+
+## Client configs
+send.conf:
+> rpcuser=sendrpc
+> rpcpassword=<rpc password for Client>
+> pcallowip=127.0.0.1
+> staking=1
+> server=1
+> listen=1
+> daemon=1
+> logtimestamps=1
+> maxconnections=256
+
+masternode.conf:
+> LABEL MNIP:MNPORT SEND_privkey TX_ID TX_IDX
+
 
 
 ## MN configs
 
 masternode.conf: 
-	§nothing relevant, commented lines are ok, otherwise empty unless you need advanced stuff
+	nothing relevant, commented lines are ok, otherwise empty unless you need advanced stuff
 
 send.conf:
-	rpcuser=sendrpc
-rpcpassword=<rpcpassword for MN>
-pcallowip=127.0.0.1
-#staking=1
-server=1
-listen=1
-daemon=1
-logtimestamps=1
-maxconnections=256
-masternode=1
-masternodeprivkey=<private key you generated on the client or MN>
-masternodeaddr=<MN IP>:50050
-externalip=<MN IP>:50050
+> rpcuser=sendrpc
+> rpcpassword=<rpc password for MN>
+> pcallowip=127.0.0.1
+> #staking=1
+> server=1
+> listen=1
+> daemon=1
+> logtimestamps=1
+> maxconnections=256
+> masternode=1
+> masternodeprivkey=<SEND_privkey>
+> masternodeaddr=<MN_IP>:<MN_Port>
+> externalip=<MN_IP>:<MN_Port>
 
 
 
