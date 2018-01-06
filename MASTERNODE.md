@@ -15,15 +15,15 @@ Here are the pieces we need:
 - TX_ID: ID for the transaction to the SEND_Address used to lock your SEND
 - TX_IDX: Index for that TX_ID
 - SEND_privkey: Private key for connecting MN with Client
-- MN_IP: IP address of the instance you are running the MN
-- MN_Port: port to be used to connect to the MN. Default: 50050
+- MN_IP: IP address of the instance you are running MN1 on
+- MN_Port: port to be used to connect to MN1. Default: 50050
 
 
 Keep a list of all pieces above and fill them in as you go along. You will need them to populate the config files.
 
 Let's go:
 1. Generate private key (SEND_privkey). You can do this on the Client (Debug console) or MN (send-cli): `masternode genkey`
-2. Get a new address (SEND_Address) for Coin Locking on the Client (Debug console) and call it with LABEL (ex: MN1): `getaccountaddress LABEL`
+2. Get a new address (SEND_Address) for Coin Locking on the Client (Debug console) and call it with LABEL (ex: MN1): `getaccountaddress MN1`
 3. Transfer exactly SEND_AMOUNT SEND to the address (SEND_Address) generated in the previous step
 4. Get the transaction details (TX_ID and TX_IDX) on the Client(Debug console): `masternode outputs`
 5. Fill it all in in the config files on the Client and on the MN, see below.
