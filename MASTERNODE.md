@@ -85,3 +85,79 @@ If you see the following after it, it means the blockchain is not synced yet.
 You should get a final line like this when it's up to date.
 > 2018-01-05 23:24:37 CActiveMasternode::SendMasternodePing() - Relay Masternode Ping vin = CTxIn(COutPoint(24da8ba47e46800a5cb40985e225aadc53eea5be0a6f5a4d03a86a008a80aa9f, 0), scriptSig=)
 
+
+
+## Troubleshooting
+
+### SECURITY
+
+Some guides seem to mention to use the same "rpcuser" and "rpcpassword" for the Client AND the MN.
+This is not necessary and might be a SECURITY risk.
+
+Anyone who compromises your MN and has access to RPC on your client can transfer your money wherever (s)he wants.
+
+
+### Client versions
+
+For best results, both client versions should be the same on the Client and on the MN.
+
+Client: Debug Console or send-cli
+MN: send-cli
+
+Here's example info of a working setup:
+
+#### Client
+```
+send-cli getinfo
+{
+    "version" : 1000007,
+    "protocolversion" : 70810,
+    "walletversion" : 61000,
+    "balance" : 6279.36172409,
+    "obfuscation_balance" : 0.00000000,
+    "blocks" : 69571,
+    "timeoffset" : -11,
+    "connections" : 16,
+    "proxy" : "",
+    "difficulty" : 110867.64655773,
+    "testnet" : false,
+    "keypoololdest" : 1513811335,
+    "keypoolsize" : 1001,
+    "paytxfee" : 0.00000000,
+    "relayfee" : 0.00010000,
+    "staking status" : "Staking Active",
+    "errors" : ""
+}
+```
+
+#### MasterNode
+```
+send-cli getinfo
+{
+    "version" : 1000007,
+    "protocolversion" : 70810,
+    "walletversion" : 61000,
+    "balance" : 0.00000000,
+    "obfuscation_balance" : 0.00000000,
+    "blocks" : 69571,
+    "timeoffset" : 0,
+    "connections" : 35,
+    "proxy" : "",
+    "difficulty" : 110867.64655773,
+    "testnet" : false,
+    "keypoololdest" : 1515097993,
+    "keypoolsize" : 1001,
+    "paytxfee" : 0.00000000,
+    "relayfee" : 0.00010000,
+    "staking status" : "Staking Not Active",
+    "errors" : ""
+}
+```
+
+
+### Use the correct LABEL/wallet for your deposited coin
+
+The LABEL (in our case above: MN1) needs to be assigned to the Client Wallet address which has the 6250 coin deposited the same in your Client Wallet.
+This has to be identical in your masternode.conf file on the Client, where you start the MN from.
+
+
