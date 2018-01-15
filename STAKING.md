@@ -23,3 +23,6 @@ MN_PERCENTAGE: 20
 YEARLY_REWARD = 9000 * 0.80 = 7200 SEND
 DAILY_REWARD = 7200 / 365 = 19.73 SEND
 
+
+You can find a SEND rewards table with percentages at following url
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTB2dKDCc8rsotlbDGe7wKL3JLqZR9nWkqWJgmyGp_PJv7lUxMqWr9luJIbL1TSCzxqIKlkxpVsLt1C/pubhtml
