@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Beam <b-docker-socialsend@grmbl.net>
 
+ENV DOCKERFILE_CHANGE=20180228194200
 ENV GIT_URL=https://github.com/SocialSend/SocialSend.git
 ENV SUDO="sudo -u send"
 ENV SEND_DIR=/home/send/SocialSend
